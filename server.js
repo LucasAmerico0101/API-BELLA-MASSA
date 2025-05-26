@@ -11,6 +11,7 @@ const orderRoutes = require('./routes/orderRoutes');
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
 const avaliacaoRoutes = require('./routes/avaliacaoRoutes');
+const couponRoutes = require('./routes/couponRoutes');
 
 // Swagger setup
 const swaggerUi = require('swagger-ui-express');
@@ -68,6 +69,7 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/avaliacoes', avaliacaoRoutes);
+app.use('/api/cupons', couponRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Middleware de tratamento de erros

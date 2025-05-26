@@ -1,14 +1,47 @@
 const OrderService = require('../services/OrderService');
+const UserModel = require('../models/UserModel');
+const CouponModel = require('../models/CouponModel');
 
 // Criar um pedido
 const createOrder = async (req, res) => {
-  const { id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas } = req.body;
+  const { id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas, cupom } = req.body;
 
   try {
+    // Busca usuário para verificar aniversário
+    const usuario = await UserModel.findById(id_cliente);
+    let pizzasAtualizadas = [...pizzas];
+    let desconto = 0;
+    let mensagem = '';
+
+    // Lógica de pizza grátis de aniversário
+    if (usuario && usuario.data_nascimento_cliente) {
+      const hoje = new Date();
+      const dataNasc = new Date(usuario.data_nascimento_cliente);
+      if (hoje.getDate() === dataNasc.getDate() && hoje.getMonth() === dataNasc.getMonth()) {
+        // Adiciona uma pizza grátis (exemplo: tamanho 'media', sabor id 1)
+        pizzasAtualizadas.push({ tipo_borda: null, preco_borda: 0, tamanho: 'media', observacao: 'Pizza grátis de aniversário', sabores: [1] });
+        mensagem += 'Parabéns! Você ganhou uma pizza grátis de aniversário. ';
+      }
+    }
+
+    // Lógica de cupom
+    if (cupom) {
+      const cupomData = await CouponModel.findByCodigo(cupom);
+      if (!cupomData) return res.status(400).json({ message: 'Cupom inválido.' });
+      if (cupomData.usado) return res.status(400).json({ message: 'Cupom já utilizado.' });
+      const hoje = new Date();
+      if (cupomData.validade && new Date(cupomData.validade) < hoje) return res.status(400).json({ message: 'Cupom expirado.' });
+      desconto = (total * (cupomData.percentual / 100));
+      mensagem += `Cupom aplicado: ${cupomData.percentual}% de desconto. `;
+      await CouponModel.marcarComoUsado(cupomData.id);
+    }
+
+    const totalFinal = total - desconto;
+
     const response = await OrderService.createOrder(
-      id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas
+      id_cliente, totalFinal, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzasAtualizadas, bebidas
     );
-    res.status(201).json(response);
+    res.status(201).json({ ...response, desconto, mensagem });
   } catch (error) {
     console.error('Erro ao criar pedido:', error);
     res.status(500).json({ message: 'Erro ao criar pedido.' });
