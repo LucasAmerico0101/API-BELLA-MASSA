@@ -97,7 +97,7 @@ const loginUser = async (email, senha) => {
     }
 
     const token = jwt.sign(
-      { id: clienteData.id_cliente, email: clienteData.email },
+      { id: clienteData.id_cliente, email: clienteData.email, role: clienteData.role || 'user' },
       SECRET_KEY,
       { expiresIn: JWT_EXPIRES_IN }
     );
@@ -111,5 +111,6 @@ const loginUser = async (email, senha) => {
 
 module.exports = {
   registerUser,
-  loginUser
+  loginUser,
+  registerAddress // Adicione esta linha
 };

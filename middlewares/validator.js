@@ -22,12 +22,12 @@ const userValidationRules = {
     body('senha')
       .isLength({ min: 6 })
       .withMessage('Senha deve ter no mínimo 6 caracteres'),
-    body('telefone').notEmpty().withMessage('Telefone é obrigatório'),
-    body('endereco').notEmpty().withMessage('Endereço é obrigatório'),
-    body('numero_casa').notEmpty().withMessage('Número da casa é obrigatório'),
-    body('cidade').notEmpty().withMessage('Cidade é obrigatória'),
-    body('estado').notEmpty().withMessage('Estado é obrigatório'),
-    body('cep').notEmpty().withMessage('CEP é obrigatório')
+    body('telefone').optional,
+    body('endereco').optional,
+    body('numero_casa').optional,
+    body('cidade').optional,
+    body('estado').optional,
+    body('cep').optional
   ],
   login: [
     body('email').isEmail().withMessage('Email inválido'),

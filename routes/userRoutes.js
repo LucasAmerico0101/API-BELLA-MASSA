@@ -1,8 +1,10 @@
 const express = require('express');
+const db = require('../config/db'); // Adicione esta linha
 const router = express.Router();
 const UserController = require('../controllers/userController');
-const { authMiddleware } = require('../middlewares/auth');
+const { authMiddleware,adminMiddleware } = require('../middlewares/auth');
 const userController = require('../controllers/userController');
+const registerAddress = require('../services/AuthService').registerAddress;
 
 /**
  * @swagger
@@ -96,5 +98,24 @@ router.put('/me', authMiddleware, userController.updateProfile);
 
 // Rotas protegidas por autenticação
 router.get('/cliente/:id', authMiddleware, UserController.getUser); 
+router.get('/', authMiddleware, adminMiddleware, async (req, res) => {
+  try {
+    const [users] = await db.query('SELECT id_cliente, nome, email, cpf, telefone, data_nascimento, role FROM cliente');
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: 'Erro ao buscar usuários' });
+  }
+});
+router.post('/endereco', authMiddleware, async (req, res) => {
+  try {
+    const usuarioId = req.user.id;
+    const { endereco, numero, complemento, bairro, cep } = req.body;
+    // Adicione cidade e estado se quiser
+    await registerAddress(usuarioId, endereco, numero, complemento, null, null, cep, bairro);
+    res.json({ message: 'Endereço cadastrado com sucesso!' });
+  } catch (error) {
+    res.status(400).json({ error: { message: error.message } });
+  }
+});
 
 module.exports = router;

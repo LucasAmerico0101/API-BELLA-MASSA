@@ -1,4 +1,3 @@
--- Active: 1734093795787@@127.0.0.1@3306
 -- Criação do banco
 DROP DATABASE IF EXISTS pizzaria;
 CREATE DATABASE pizzaria;
@@ -7,14 +6,14 @@ USE pizzaria;
 -- Endereços
 CREATE TABLE endereco (
     id_endereco INTEGER NOT NULL AUTO_INCREMENT,
-    rua VARCHAR(100) NOT NULL,
-    numero VARCHAR(10) NOT NULL,
-    tipo_endereco VARCHAR(30) NOT NULL,
-    bairro VARCHAR(50) NOT NULL,
+    rua VARCHAR(100)  NULL,
+    numero VARCHAR(10) NULL,
+    tipo_endereco VARCHAR(30)  NULL,
+    bairro VARCHAR(50)  NULL,
     complemento VARCHAR(50),
-    cidade VARCHAR(50) NOT NULL,
-    estado CHAR(2) NOT NULL,
-    cep CHAR(8) NOT NULL,
+    cidade VARCHAR(50)  NULL,
+    estado CHAR(2)  NULL,
+    cep CHAR(8) NULL,
     PRIMARY KEY (id_endereco)
 );
 

@@ -398,3 +398,118 @@
   level: 'error',
   timestamp: '2025-05-20T23:21:56.164Z'
 }
+{
+  message: "Erro no cadastro do cliente: Unknown column 'cpf' in 'field list'",
+  level: 'error',
+  timestamp: '2025-06-09T03:44:22.700Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'cpf' in 'field list'",
+  level: 'error',
+  timestamp: '2025-06-09T03:44:22.704Z'
+}
+{
+  message: "Erro no cadastro do cliente: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:01.642Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:18.406Z'
+}
+{
+  message: "Erro no cadastro do cliente: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:18.544Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:18.544Z'
+}
+{
+  message: "Erro no cadastro do cliente: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:18.547Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:18.547Z'
+}
+{
+  message: "Erro no cadastro do cliente: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:18.549Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:46:18.550Z'
+}
+{
+  message: "Erro no cadastro do cliente: Unknown column 'cpf' in 'field list'",
+  level: 'error',
+  timestamp: '2025-06-09T03:54:30.046Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'cpf' in 'field list'",
+  level: 'error',
+  timestamp: '2025-06-09T03:54:30.049Z'
+}
+{
+  message: "Erro no cadastro do cliente: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:56:02.403Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:56:02.407Z'
+}
+{
+  message: "Erro no cadastro do cliente: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:58:02.519Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'id_endereco' cannot be null",
+  level: 'error',
+  timestamp: '2025-06-09T03:58:02.522Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: AuthService.registerAddress is not a function',
+  level: 'error',
+  timestamp: '2025-06-09T04:01:22.060Z'
+}
+{
+  message: 'Erro no cadastro do cliente: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-06-09T04:03:01.910Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-06-09T04:03:01.912Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-06-09T04:03:21.545Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-06-09T04:03:21.546Z'
+}
+{
+  message: 'Erro no cadastro do cliente: Email inválido.',
+  level: 'error',
+  timestamp: '2025-06-09T05:35:40.592Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email inválido.',
+  level: 'error',
+  timestamp: '2025-06-09T05:35:40.593Z'
+}
