@@ -3,11 +3,9 @@ const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
+
 require('dotenv').config();
 
-app.get('/', (req, res) => {
-  res.redirect('/api-docs');  // por exemplo, redireciona para Swagger UI
-});
 
 // Importação das rotas
 const menuRoutes = require('./routes/menuRoutes');
@@ -59,6 +57,11 @@ const limiter = rateLimit({
 });
 
 const app = express();
+
+app.get('/', (req, res) => {
+  res.redirect('/api-docs');  // por exemplo, redireciona para Swagger UI
+});
+
 
 // Middlewares de segurança e logging
 app.use(helmet());
