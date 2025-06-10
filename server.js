@@ -58,19 +58,20 @@ const limiter = rateLimit({
 
 const app = express();
 
-app.set('trust proxy', 1);
+app.use(cors({
+  origin: 'http://127.0.0.1:5500', // ou 'http://localhost:5500' se acessar por localhost
+  credentials: true
+}));
+
+// Middlewares de segurança e logging
+app.use(helmet());
+app.use(limiter);
+app.use(morgan('dev'));
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.redirect('/api-docs');  // por exemplo, redireciona para Swagger UI
 });
-
-
-// Middlewares de segurança e logging
-app.use(helmet());
-app.use(cors());
-app.use(limiter);
-app.use(morgan('dev'));
-app.use(express.json());
 
 // Rotas
 app.use('/api/menu', menuRoutes);
