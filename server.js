@@ -58,6 +58,8 @@ const limiter = rateLimit({
 
 const app = express();
 
+app.set('trust proxy', 1);
+
 app.get('/', (req, res) => {
   res.redirect('/api-docs');  // por exemplo, redireciona para Swagger UI
 });
