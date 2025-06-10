@@ -3,10 +3,10 @@ require('dotenv').config();
 
 // Criação do pool de conexões
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASS || '',
-  database: process.env.DB_NAME || 'pizzaria',
+  host: process.env.DB_HOST || 'mysql-bella-massa.alwaysdata.net',
+  user: process.env.DB_USER || '417402',
+  password: process.env.DB_PASS || 'Lu0306@#',
+  database: process.env.DB_NAME || 'bella-massa_pizzaria',
   port: process.env.DB_PORT || 3306,
   waitForConnections: true, // Aguarda por conexões disponíveis no pool
   connectionLimit: 10, // Limite de conexões no pool
