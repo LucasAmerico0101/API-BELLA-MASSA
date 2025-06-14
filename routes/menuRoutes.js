@@ -204,15 +204,14 @@ const { authMiddleware, adminMiddleware } = require('../middlewares/auth');
  */
 
 // Rotas públicas
-router.get('/pizzas', MenuController.getPizzas);
+router.get('/sabores', MenuController.getSabores);
+router.get('/sabores/:id', MenuController.getSaborById);
 router.get('/bebidas', MenuController.getBebidas);
+router.get('/pizzas', MenuController.getPizzas);
 
 // Rotas protegidas por autenticação e admin
-router.post('/pizzas', authMiddleware, adminMiddleware, MenuController.addPizza);
+router.post('/sabores', authMiddleware, adminMiddleware, MenuController.addSabor);
 router.post('/bebidas', authMiddleware, adminMiddleware, MenuController.addBebida);
-router.put('/pizzas', authMiddleware, adminMiddleware, MenuController.updatePizza);
-router.put('/bebidas', authMiddleware, adminMiddleware, MenuController.updateBebida);
-router.delete('/pizzas/:id_pizza', authMiddleware, adminMiddleware, MenuController.removePizza);
-router.delete('/bebidas/:id_bebida', authMiddleware, adminMiddleware, MenuController.removeBebida);
+router.post('/pizzas', authMiddleware, adminMiddleware, MenuController.addPizza);
 
 module.exports = router;

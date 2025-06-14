@@ -59,7 +59,7 @@ const limiter = rateLimit({
 const app = express();
 
 app.use(cors({
-  origin: 'http://127.0.0.1:5500', // ou 'http://localhost:5500' se acessar por localhost
+  origin: ['http://127.0.0.1:5500', 'http://localhost:5500', 'http://localhost:5501', 'http://127.0.0.1:5501'],
   credentials: true
 }));
 

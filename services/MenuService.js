@@ -1,17 +1,19 @@
 const db = require('../config/db');
 
 
-const getPizzas = async () => {
+// Buscar todos os sabores de pizza
+const getSabores = async () => {
   try {
-    const query = `SELECT * FROM pizza`;
+    const query = `SELECT * FROM sabor`;
     const [rows] = await db.query(query);
     return rows;
   } catch (error) {
-    throw new Error('Erro ao listar pizzas: ' + error.message);
+    throw new Error('Erro ao listar sabores: ' + error.message);
   }
 };
 
 
+// Buscar todas as bebidas
 const getBebidas = async () => {
   try {
     const query = `SELECT * FROM bebida`;
@@ -23,73 +25,78 @@ const getBebidas = async () => {
 };
 
 
-const addPizza = async (sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao) => {
+// Adicionar um sabor de pizza
+const addSabor = async (nome, preco) => {
   try {
-    const query = `INSERT INTO pizza (sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao) 
-                   VALUES (?, ?, ?, ?, ?, ?)`;
-    await db.query(query, [sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao]);
-    return { message: "Pizza adicionada com sucesso!" };
+    const query = `INSERT INTO sabor (nome, preco) VALUES (?, ?)`;
+    await db.query(query, [nome, preco]);
+   res.json({ success: true, message: "Produto cadastrado com sucesso!" });
   } catch (error) {
-    throw new Error('Erro ao adicionar pizza: ' + error.message);
+    throw new Error('Erro ao adicionar sabor: ' + error.message);
   }
 };
 
 
-const addBebida = async (nome, tamanho, preco) => {
+// Adicionar uma bebida
+const addBebida = async (imagem_url, nome, tamanho, preco, id_pedido) => {
   try {
-    const query = `INSERT INTO bebida (nome, tamanho, preco) VALUES (?, ?, ?)`;
-    await db.query(query, [nome, tamanho, preco]);
-    return { message: "Bebida adicionada com sucesso!" };
+    const query = `INSERT INTO bebida (imagem_url, nome, tamanho, preco, id_pedido) VALUES (?, ?, ?, ?, ?)`;
+    await db.query(query, [imagem_url, nome, tamanho, preco, id_pedido]);
+    res.json({ success: true, message: "Produto cadastrado com sucesso!" });
   } catch (error) {
     throw new Error('Erro ao adicionar bebida: ' + error.message);
   }
 };
 
 
-const updatePizza = async (id_pizza, sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao) => {
+// Adicionar uma pizza
+const addPizza = async (imagem_url, tipo_borda, preco_borda, tamanho, observacao, id_pedido, sabores) => {
+  const conn = await db.getConnection(); // se estiver usando pool de conexões
   try {
-    const query = `UPDATE pizza 
-                   SET sabor = ?, preco_sabor = ?, tipo_borda = ?, preco_borda = ?, tamanho = ?, observacao = ? 
-                   WHERE id_pizza = ?`;
-    await db.query(query, [sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao, id_pizza]);
-    return { message: "Pizza atualizada com sucesso!" };
-  } catch (error) {
-    throw new Error('Erro ao atualizar pizza: ' + error.message);
-  }
-};
+    await conn.beginTransaction();
 
-const updateBebida = async (id_bebida, nome, tamanho, preco) => {
-  try {
-    const query = `UPDATE bebida 
-                   SET nome = ?, tamanho = ?, preco = ? 
-                   WHERE id_bebida = ?`;
-    await db.query(query, [nome, tamanho, preco, id_bebida]);
-    return { message: "Bebida atualizada com sucesso!" };
-  } catch (error) {
-    throw new Error('Erro ao atualizar bebida: ' + error.message);
-  }
-};
+    // 1. Insere a pizza (agora com imagem_url)
+    const pizzaQuery = `INSERT INTO pizza (imagem_url, tipo_borda, preco_borda, tamanho, observacao, id_pedido) VALUES (?, ?, ?, ?, ?, ?)`;
+    const [pizzaResult] = await conn.query(pizzaQuery, [imagem_url, tipo_borda, preco_borda, tamanho, observacao, id_pedido]);
+    const id_pizza = pizzaResult.insertId;
 
+    // 2. Associa os sabores à pizza
+    const pizzaSaborQuery = `INSERT INTO pizza_sabor (id_pizza, id_sabor) VALUES (?, ?)`;
+    for (const id_sabor of sabores) {
+      await conn.query(pizzaSaborQuery, [id_pizza, id_sabor]);
+    }
 
-const removePizza = async (id_pizza) => {
-  try {
-    const query = `DELETE FROM pizza WHERE id_pizza = ?`;
-    await db.query(query, [id_pizza]);
-    return { message: "Pizza removida com sucesso!" };
+    await conn.commit();
+    return { success: true, message: "Produto cadastrado com sucesso!" };
   } catch (error) {
-    throw new Error('Erro ao remover pizza: ' + error.message);
+    await conn.rollback();
+    throw new Error('Erro ao adicionar pizza: ' + error.message);
+  } finally {
+    conn.release();
   }
 };
 
 
-const removeBebida = async (id_bebida) => {
+const getSaborById = async (id_sabor) => {
   try {
-    const query = `DELETE FROM bebida WHERE id_bebida = ?`;
-    await db.query(query, [id_bebida]);
-    return { message: "Bebida removida com sucesso!" };
+    const query = `SELECT * FROM sabor WHERE id_sabor = ?`;
+    const [rows] = await db.query(query, [id_sabor]);
+    return rows[0] || null;
   } catch (error) {
-    throw new Error('Erro ao remover bebida: ' + error.message);
+    throw new Error('Erro ao buscar sabor: ' + error.message);
   }
 };
 
-module.exports = { getPizzas, getBebidas, addPizza, addBebida, updatePizza, updateBebida, removePizza, removeBebida };
+
+const getPizzas = async () => {
+  try {
+    const query = `SELECT * FROM pizza`;
+    const [rows] = await db.query(query);
+    return rows;
+  } catch (error) {
+    throw new Error('Erro ao listar pizzas: ' + error.message);
+  }
+};
+
+
+module.exports = { getSabores, getBebidas, addSabor, addBebida, addPizza, getSaborById, getPizzas };
