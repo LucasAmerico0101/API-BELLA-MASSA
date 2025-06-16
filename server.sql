@@ -27,7 +27,10 @@ CREATE TABLE cliente (
     data_registro DATE NOT NULL,
     email_confirmado BOOLEAN DEFAULT 0,
     email_token VARCHAR(255),
-    id_endereco INTEGER NOT NULL,
+    id_endereco INTEGER DEFAULT NULL,
+    cpf VARCHAR(11) not null,
+    senha VARCHAR(255) not null,
+    role VARCHAR(15) not null DEFAULT = "user",
     PRIMARY KEY (id_cliente),
     FOREIGN KEY (id_endereco) REFERENCES endereco(id_endereco)
 );
