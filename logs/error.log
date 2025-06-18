@@ -568,3 +568,13 @@
   level: 'error',
   timestamp: '2025-06-14T03:11:01.063Z'
 }
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-06-17T23:19:32.484Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-06-17T23:19:32.485Z'
+}

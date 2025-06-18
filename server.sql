@@ -1,3 +1,4 @@
+-- Active: 1750201795731@@127.0.0.1@3306
 -- Criação do banco
 DROP DATABASE IF EXISTS pizzaria;
 CREATE DATABASE pizzaria;
@@ -28,9 +29,9 @@ CREATE TABLE cliente (
     email_confirmado BOOLEAN DEFAULT 0,
     email_token VARCHAR(255),
     id_endereco INTEGER DEFAULT NULL,
-    cpf VARCHAR(11) not null,
-    senha VARCHAR(255) not null,
-    role VARCHAR(15) not null DEFAULT = "user",
+    cpf VARCHAR(11) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    role VARCHAR(15) NULL DEFAULT 'user',
     PRIMARY KEY (id_cliente),
     FOREIGN KEY (id_endereco) REFERENCES endereco(id_endereco)
 );
@@ -125,3 +126,6 @@ CREATE TABLE avaliacao (
     FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
+
+ALTER TABLE pizza DROP FOREIGN KEY pizza_ibfk_1;
+ALTER TABLE pizza DROP COLUMN id_pedido;

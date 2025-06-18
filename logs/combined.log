@@ -7168,3 +7168,633 @@
   level: 'info',
   timestamp: '2025-06-14T03:12:39.142Z'
 }
+{
+  message: 'Novo usuário registrado: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-06-17T23:19:22.540Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-06-17T23:19:32.484Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-06-17T23:19:32.485Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-06-17T23:20:52.283Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMjQ1MiwiZXhwIjoxNzUwMjA2MDUyfQ.5pmqxaBaDdmRcasNo56o3fe0pvOYlNG2itpNGsAs2po',
+  level: 'info',
+  timestamp: '2025-06-17T23:20:55.391Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMjQ1MiwiZXhwIjoxNzUwMjA2MDUyfQ.5pmqxaBaDdmRcasNo56o3fe0pvOYlNG2itpNGsAs2po',
+  level: 'info',
+  timestamp: '2025-06-17T23:20:55.392Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:20:55.393Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750202452,"exp":1750206052}',
+  level: 'info',
+  timestamp: '2025-06-17T23:20:55.397Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:20:55.399Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-06-17T23:22:59.732Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.858Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.859Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.860Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.865Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.868Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.896Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.897Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.897Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.899Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:23:47.900Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:27:45.517Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:27:45.523Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:27:45.524Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:27:45.530Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:27:45.536Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:30:54.173Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:30:54.176Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:30:54.176Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:30:54.179Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:30:54.182Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:20.840Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:20.841Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:20.842Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:20.845Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:20.848Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:43.495Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:43.496Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:43.497Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:43.499Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:43.500Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:44.842Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:44.843Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:44.844Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:44.848Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:44.850Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:46.637Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAyMDI1NzksImV4cCI6MTc1MDIwNjE3OX0.oXiCzDxaxEkA4fCMtOA-_BxxAC42YgGyWnE53zIXnsE',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:46.637Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:46.639Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"admin","iat":1750202579,"exp":1750206179}',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:46.641Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:46.642Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:53.033Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:54.827Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:54.828Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:54.830Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:54.832Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:54.835Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.513Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.513Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.514Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.517Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.522Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.531Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.531Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.532Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.533Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:31:56.534Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.824Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.824Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.825Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.827Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.829Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.833Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.833Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.834Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.836Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:56.837Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.483Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.484Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.485Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.488Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.490Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.519Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.520Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.520Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.522Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.526Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.833Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.834Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.835Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.837Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:57.839Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:58.004Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:58.005Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:58.008Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:58.011Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:33:58.015Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.043Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.043Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.045Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.047Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.049Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.065Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.065Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.066Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.068Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.073Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.275Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.275Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.277Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.279Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.280Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.299Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.300Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.300Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.302Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:34:06.305Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.327Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.328Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.329Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.332Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.335Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.341Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MDIwMzExMywiZXhwIjoxNzUwMjA2NzEzfQ.vqrut1Tcc_bdUR8uaKIQfwsMlHQIf2Z95z83kUxcEGc',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.342Z'
+}
+{
+  message: 'JWT_SECRET: S3NH4_S3CR3T4',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.342Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","role":"user","iat":1750203113,"exp":1750206713}',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.344Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-06-17T23:35:02.346Z'
+}

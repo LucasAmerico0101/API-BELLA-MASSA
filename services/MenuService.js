@@ -56,8 +56,8 @@ const addPizza = async (imagem_url, tipo_borda, preco_borda, tamanho, observacao
     await conn.beginTransaction();
 
     // 1. Insere a pizza (agora com imagem_url)
-    const pizzaQuery = `INSERT INTO pizza (imagem_url, tipo_borda, preco_borda, tamanho, observacao, id_pedido) VALUES (?, ?, ?, ?, ?, ?)`;
-    const [pizzaResult] = await conn.query(pizzaQuery, [imagem_url, tipo_borda, preco_borda, tamanho, observacao, id_pedido]);
+    const pizzaQuery = `INSERT INTO pizza (imagem_url, tipo_borda, preco_borda, tamanho, observacao) VALUES (?, ?, ?, ?, ?)`;
+    const [pizzaResult] = await conn.query(pizzaQuery, [imagem_url, tipo_borda, preco_borda, tamanho, observacao]);
     const id_pizza = pizzaResult.insertId;
 
     // 2. Associa os sabores à pizza
