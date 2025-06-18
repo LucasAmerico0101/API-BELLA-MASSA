@@ -90,7 +90,20 @@ const getSaborById = async (id_sabor) => {
 
 const getPizzas = async () => {
   try {
-    const query = `SELECT * FROM pizza`;
+    const query = `
+      SELECT 
+        p.id_pizza,
+        p.imagem_url,
+        p.tipo_borda,
+        p.preco_borda,
+        p.tamanho,
+        p.observacao,
+        s.nome AS sabor,
+        s.preco AS preco_sabor
+      FROM pizza p
+      JOIN pizza_sabor ps ON p.id_pizza = ps.id_pizza
+      JOIN sabor s ON ps.id_sabor = s.id_sabor
+    `;
     const [rows] = await db.query(query);
     return rows;
   } catch (error) {

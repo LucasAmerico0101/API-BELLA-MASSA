@@ -3,8 +3,9 @@ const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const morgan = require('morgan');
-
 require('dotenv').config();
+
+const app = express();
 
 
 // Importação das rotas
@@ -55,8 +56,6 @@ const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutos
   max: 100 // limite de 100 requisições por IP
 });
-
-const app = express();
 
 app.use(cors({
   origin: ['http://127.0.0.1:5500', 'http://localhost:5500', 'http://localhost:5501', 'http://127.0.0.1:5501'],

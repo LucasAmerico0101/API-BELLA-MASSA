@@ -1,5 +1,4 @@
--- Active: 1750201795731@@127.0.0.1@3306
--- Criação do banco
+-- Active: 1750218885632@@127.0.0.1@3306
 DROP DATABASE IF EXISTS pizzaria;
 CREATE DATABASE pizzaria;
 USE pizzaria;

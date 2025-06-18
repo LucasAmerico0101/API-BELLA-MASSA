@@ -578,3 +578,18 @@
   level: 'error',
   timestamp: '2025-06-17T23:19:32.485Z'
 }
+{
+  message: "Erro no cadastro do cliente: Data too long for column 'cpf' at row 1",
+  level: 'error',
+  timestamp: '2025-06-18T04:16:56.081Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Data too long for column 'cpf' at row 1",
+  level: 'error',
+  timestamp: '2025-06-18T04:16:56.083Z'
+}
+{
+  message: "Erro no cadastro do endereço: Data too long for column 'cep' at row 1",
+  level: 'error',
+  timestamp: '2025-06-18T04:23:00.184Z'
+}
