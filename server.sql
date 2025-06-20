@@ -86,9 +86,8 @@ CREATE TABLE pizza (
     preco_borda DECIMAL(10,2) NOT NULL,
     tamanho ENUM('broto', 'media', 'grande') NOT NULL,
     observacao VARCHAR(200),
-    id_pedido INTEGER NOT NULL,
-    PRIMARY KEY (id_pizza),
-    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido)
+    PRIMARY KEY (id_pizza)
+    
 );
 
 -- Pizza-Sabor (permite combinar sabores em uma pizza, ex: meio a meio)
@@ -107,9 +106,7 @@ CREATE TABLE bebida (
     nome VARCHAR(50) NOT NULL,
     tamanho ENUM('lata', '600ml', '1L', '2L') NOT NULL,
     preco DECIMAL(10,2) NOT NULL,
-    id_pedido INTEGER NOT NULL,
-    PRIMARY KEY (id_bebida),
-    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido)
+    PRIMARY KEY (id_bebida)
 );
 
 -- Avaliações
