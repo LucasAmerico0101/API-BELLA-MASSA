@@ -593,3 +593,23 @@
   level: 'error',
   timestamp: '2025-06-18T04:23:00.184Z'
 }
+{
+  message: "Erro no cadastro do endereço: Data too long for column 'cep' at row 1",
+  level: 'error',
+  timestamp: '2025-06-21T18:07:16.772Z'
+}
+{
+  message: "Erro no cadastro do endereço: Data too long for column 'cep' at row 1",
+  level: 'error',
+  timestamp: '2025-06-21T18:37:52.555Z'
+}
+{
+  message: 'Erro no cadastro do cliente: Email inválido.',
+  level: 'error',
+  timestamp: '2025-06-21T19:49:31.117Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email inválido.',
+  level: 'error',
+  timestamp: '2025-06-21T19:49:31.121Z'
+}

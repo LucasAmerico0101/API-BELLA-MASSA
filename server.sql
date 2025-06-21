@@ -14,7 +14,9 @@ CREATE TABLE endereco (
     cidade VARCHAR(50)  NULL,
     estado CHAR(2)  NULL,
     cep CHAR(8) NULL,
-    PRIMARY KEY (id_endereco)
+    cliente_id INTEGER not NULL,
+    PRIMARY KEY (id_endereco),
+    FOREIGN KEY (cliente_id) REFERENCES cliente(id_cliente)
 );
 
 -- Clientes
@@ -81,6 +83,7 @@ CREATE TABLE sabor (
 
 -- Pizzas (representa a pizza "física" feita no pedido)
 CREATE TABLE pizza (
+    imagem_url VARCHAR(255) NOT NULL,
     id_pizza INTEGER NOT NULL AUTO_INCREMENT,
     tipo_borda ENUM('tradicional', 'recheada', 'sem borda') NOT NULL,
     preco_borda DECIMAL(10,2) NOT NULL,
@@ -122,6 +125,3 @@ CREATE TABLE avaliacao (
     FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
-
-ALTER TABLE pizza DROP FOREIGN KEY pizza_ibfk_1;
-ALTER TABLE pizza DROP COLUMN id_pedido;

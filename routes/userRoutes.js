@@ -109,12 +109,37 @@ router.get('/', authMiddleware, adminMiddleware, async (req, res) => {
 router.post('/endereco', authMiddleware, async (req, res) => {
   try {
     const usuarioId = req.user.id;
-    const { endereco, numero, complemento, bairro, cep } = req.body;
-    // Adicione cidade e estado se quiser
-    await registerAddress(usuarioId, endereco, numero, complemento, null, null, cep, bairro);
+    const { endereco: rua, numero, complemento, bairro, cep, cidade, estado, tipo_endereco } = req.body;
+    
+    // Verificação básica dos campos obrigatórios
+    if (!rua || !numero || !bairro || !cep) {
+      return res.status(400).json({ error: { message: 'Campos obrigatórios faltando' } });
+    }
+
+    await db.execute(
+      'INSERT INTO endereco (rua, numero, complemento, bairro, cep, cidade, estado, tipo_endereco, cliente_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+      [rua, numero, complemento || null, bairro, cep, cidade || null, estado || null, tipo_endereco || 'residencial', usuarioId]
+    );
+
     res.json({ message: 'Endereço cadastrado com sucesso!' });
   } catch (error) {
-    res.status(400).json({ error: { message: error.message } });
+    console.error('Erro ao cadastrar endereço:', error);
+    res.status(500).json({ error: { message: 'Erro interno ao cadastrar endereço' } });
+  }
+});
+router.get('/endereco', authMiddleware, async (req, res) => {
+  try {
+    const usuarioId = req.user.id;
+
+    const [enderecos] = await db.query(
+      'SELECT * FROM endereco WHERE cliente_id = ?',
+      [usuarioId]
+    );
+
+    res.json(enderecos);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Erro ao buscar endereços do usuário' });
   }
 });
 

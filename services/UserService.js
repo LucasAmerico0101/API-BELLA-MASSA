@@ -3,48 +3,41 @@ const bcrypt = require('bcrypt');
 
 const UserService = {
     async createUser(nome, email, senha, telefone, data_nascimento, cep, rua, bairro, cidade, estado, tipo_endereco, numero, complemento) {
-        const connection = await db.getConnection(); // Obtém uma conexão do pool
-        try {
-            // Inicia uma transação
-            await connection.beginTransaction();
+  const connection = await db.getConnection();
+  try {
+    await connection.beginTransaction();
 
-            // Hash da senha
-            const hashedPassword = await bcrypt.hash(senha, 10);
+    const hashedPassword = await bcrypt.hash(senha, 10);
 
-            // Query de inserção do endereço
-            const addressQuery = `
-                INSERT INTO endereco (rua, numero, tipo_endereco, bairro, complemento, cidade, estado, cep) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+    // Cria o cliente primeiro
+    const clienteQuery = `
+      INSERT INTO cliente (nome, telefone, data_nascimento, email, data_registro) 
+      VALUES (?, ?, ?, ?, CURRENT_DATE())`;
+    const [clienteResult] = await connection.execute(clienteQuery, [nome, telefone, data_nascimento, email]);
 
-            const [addressResult] = await connection.execute(addressQuery, [rua, numero, tipo_endereco, bairro, complemento, cidade, estado, cep]);
+    const clienteId = clienteResult.insertId;
+    if (!clienteId) throw new Error('Erro ao criar cliente');
 
-            if (!addressResult || !addressResult.insertId) {
-                throw new Error('Erro ao criar endereço: não foi possível obter o ID do endereço');
-            }
+    // Agora cria o endereço vinculado ao cliente
+    const addressQuery = `
+      INSERT INTO endereco (rua, numero, tipo_endereco, bairro, complemento, cidade, estado, cep, cliente_id) 
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+    await connection.execute(addressQuery, [rua, numero, tipo_endereco, bairro, complemento, cidade, estado, cep, clienteId]);
 
-            const id_endereco = addressResult.insertId;
+    await connection.commit();
 
-            // Query de inserção do cliente
-            const clienteQuery = `
-                INSERT INTO cliente (nome, telefone, data_nascimento, email, data_registro, id_endereco) 
-                VALUES (?, ?, ?, ?, CURRENT_DATE(), ?)`;
-
-            await connection.execute(clienteQuery, [nome, telefone, data_nascimento, email, id_endereco]);
-
-            // Se tudo ocorreu bem, faz commit da transação
-            await connection.commit();
-
-            return { success: true, message: 'Cliente cadastrado com sucesso!' };
-
-        } catch (error) {
-            // Se ocorrer algum erro, desfaz a transação (rollback)
-            await connection.rollback();
-            throw new Error('Erro ao criar cliente: ' + error.message);
-        } finally {
-            // Libera a conexão, mesmo que ocorra erro ou sucesso
-            connection.release();
-        }
-    },
+    return { 
+      success: true, 
+      message: 'Cliente e endereço cadastrados com sucesso!',
+      id_cliente: clienteId // <-- Adicione isso
+    };
+  } catch (error) {
+    await connection.rollback();
+    throw new Error('Erro ao criar cliente: ' + error.message);
+  } finally {
+    connection.release();
+  }
+},
 
     async getUserById(userId) {
         try {
@@ -52,7 +45,7 @@ const UserService = {
                 SELECT c.id_cliente, c.nome, c.email, c.telefone, c.data_nascimento, c.data_registro, 
                        e.id_endereco, e.rua, e.numero, e.tipo_endereco, e.bairro, e.complemento, e.cidade, e.estado, e.cep
                 FROM cliente c
-                LEFT JOIN endereco e ON c.id_endereco = e.id_endereco
+                LEFT JOIN endereco e ON e.cliente_id = c.id_cliente
                 WHERE c.id_cliente = ?`;
 
             const [rows] = await db.execute(query, [userId]);
