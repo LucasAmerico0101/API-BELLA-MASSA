@@ -38,11 +38,12 @@ const addSabor = async (nome, preco) => {
 
 
 // Adicionar uma bebida
-const addBebida = async (imagem_url, nome, tamanho, preco, id_pedido) => {
+const addBebida = async (dadosBebida) => {
   try {
-    const query = `INSERT INTO bebida (imagem_url, nome, tamanho, preco, id_pedido) VALUES (?, ?, ?, ?, ?)`;
-    await db.query(query, [imagem_url, nome, tamanho, preco, id_pedido]);
-    res.json({ success: true, message: "Produto cadastrado com sucesso!" });
+    const { imagem_url, nome, tamanho, preco } = dadosBebida;
+    const query = `INSERT INTO bebida (imagem_url, nome, tamanho, preco) VALUES (?, ?, ?, ?)`;
+    await db.query(query, [imagem_url, nome, tamanho, preco]);
+    return { success: true, message: 'Bebida adicionada com sucesso!' };
   } catch (error) {
     throw new Error('Erro ao adicionar bebida: ' + error.message);
   }

@@ -64,7 +64,7 @@ const addSabor = async (req, res) => {
 const addBebida = async (req, res) => {
   const { imagem_url, nome, tamanho, preco, id_pedido } = req.body;
   try {
-    const response = await MenuService.addBebida(imagem_url, nome, tamanho, preco, id_pedido);
+const response = await MenuService.addBebida({ imagem_url, nome, tamanho, preco });
     res.status(201).json(response);
   } catch (error) {
     console.error('Erro ao adicionar bebida:', error);

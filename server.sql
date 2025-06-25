@@ -125,3 +125,17 @@ CREATE TABLE avaliacao (
     FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
+use pizzaria;
+CREATE TABLE cupom (
+    id_cupom INT AUTO_INCREMENT PRIMARY KEY,
+    codigo VARCHAR(50) NOT NULL UNIQUE,
+    percentual DECIMAL(5,2) NOT NULL,
+    validade DATE NOT NULL,
+    uso_unico BOOLEAN DEFAULT FALSE,
+    id_cliente INT DEFAULT NULL,
+    valor_minimo DECIMAL(10,2) DEFAULT NULL,
+    dias_validos JSON DEFAULT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+ALTER TABLE cupom ADD COLUMN usado BOOLEAN DEFAULT FALSE;
